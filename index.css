@@ -1,0 +1,66 @@
+.bloc1{
+    border: solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+h1{
+    text-align: center;
+    font-size: 100px;
+}
+
+input[type=number]:focus {
+    border: 3px solid #555;
+}
+
+input[type=number] {
+    width: auto;
+    padding: 16px 20px;
+    margin-bottom: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+select {
+    width: auto;
+    padding: 16px 20px;
+    margin-bottom: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+form{
+    text-align: center;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.citationZone{
+    text-align: center;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#titre1{
+    display: none;
+}
+
+#form2{
+    display: none;
+    margin-top: 5%;
+}

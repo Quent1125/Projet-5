@@ -14,15 +14,17 @@ function generateur(nb,type){
   let texte = "";
   if (nb > 0){
     if (type !== "" ){
+      document.getElementById("titre1").style.display = "block";
+      document.getElementById("form2").style.display = "block";
       if (type === "2" ){
         for (let i = 0 ; i<nb ; i++){
-          texte = "citation"+ (i+1) +  " :" + debutT2[getRandomInt(debutT2.length)] + milieuT2[getRandomInt(milieuT2.length)] + finT2[getRandomInt(finT2.length)]+ " \n" ;
+          texte = "Citation "+ (i+1) +  " : " + debutT2[getRandomInt(debutT2.length)] +" "+ milieuT2[getRandomInt(milieuT2.length)] +" "+ finT2[getRandomInt(finT2.length)]+ " \n" ;
           document.getElementById("citationZone").innerText += texte ;
         }
       }
       if (type === "1"){
         for (let i = 0 ; i<nb ; i++){
-          texte = "citation"+ (i+1) +  " :" + debutT1[getRandomInt(debutT1.length)] + milieuT1[getRandomInt(milieuT1.length)] + finT1[getRandomInt(finT1.length)]+ " \n" ;
+          texte = "Citation "+ (i+1) +  " : " + debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+ " \n" ;
           document.getElementById("citationZone").innerText += texte ;
         }
       }
@@ -34,3 +36,9 @@ function generateur(nb,type){
     document.getElementById("citationZone").innerText = "Pas de nombre de citation séléctionner" ;
   }
 }
+
+
+document.getElementById("btn2").addEventListener('click', document.location.reload(true));
+
+
+document.getElementById("btn1").addEventListener('click',generateur(document.getElementById('nb').value,document.getElementById('typesC').value));

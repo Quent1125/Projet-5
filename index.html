@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <title>Générateur de Citation</title>
     <script type="text/javascript" src="generateur.js"></script>
+    <link rel="stylesheet" media="screen" type="text/css" href="index.css"/>
 </head>
 <body>
 
 
-<form>
+<h1>Générateur de citation</h1>
 
-    <label for="nb">Combien de citations voulait vous générer ? </label><input id="nb" type="number" max="5" min="1" >
-    <label>Types de citations : </label>
-    <select name="typesC" id="typesC">
-        <option value="">--Choisissez une option--</option>
-        <option value="1">Type1</option>
-        <option value="2">Type2</option>
-    </select>
-    <input type="submit" id="btn1" value="Générer" onclick="generateur(document.getElementById('nb').value,document.getElementById('typesC').value);return false;">
+<div class="bloc1">
 
 
+    <form>
+        <label for="nb">Combien de citations voulait vous générer ? </label>
+        <input id="nb" type="number" max="5" min="1" ><br>
+        <label>Types de citations : </label>
+        <select name="typesC" id="typesC">
+            <option value="">--Choisissez une option--</option>
+            <option value="1">Type1</option>
+            <option value="2">Type2</option>
+        </select><br>
+        <input type="submit" id="btn1" value="Générer" onclick="generateur(document.getElementById('nb').value,document.getElementById('typesC').value);return false;">
+    </form>
 
+</div>
+<br>
+<h1 id="titre1" >Citation</h1>
+<div class="citationZone" id="citationZone"></div>
 
-
+<form id="form2">
+    <input type="submit" id="btn2" value="Arrêter" >
 </form>
-
-
-    <div class="citationZone" id="citationZone"></div>
 
 
 
