@@ -3,15 +3,33 @@ function getRandomInt(max) {
 }
 
 
-function generateur(nb){
+function generateur(nb,type){
   document.getElementById("citationZone").innerText = "" ;
-  let debut = ["debut1", "debut2","debut3","debut4","debut5","debut6","debut7","debut8","debut9","debut10"];
-  let milieu = ["millieu1","millieu2","millieu3","millieu4","millieu5","millieu6","millieu7","millieu8","millieu9","millieu10"];
-  let fin = ["fin1","fin2","fin3","fin4","fin5","fin6","fin7","fin8","fin9","fin10"];
-  for (let i = 0 ; i<nb ; i++){
+  const debutT1 = ["debut1T1", "debut2T1","debut3T1","debut4T1","debut5T1","debut6T1","debut7T1","debut8T1","debut9T1","debut10T1"];
+  const  milieuT1 = ["millieu1T1","millieu2T1","millieu3T1","millieu4T1","millieu5T1","millieu6T1","millieu7T1","millieu8T1","millieu9T1","millieu10T1"];
+  const finT1 = ["fin1T1","fin2T1","fin3T1","fin4T1","fin5T1","fin6T1","fin7T1","fin8T1","fin9T1","fin10T1"];
+  const debutT2 = ["debut1T2", "debut2T2","debut3T2","debut4T2","debut5T2","debut6T2","debut7T2","debut8T2","debut9T2","debut10T2"];
+  const  milieuT2 = ["millieu1T2","millieu2T2","millieu3T2","millieu4T2","millieu5T2","millieu6T2","millieu7T2","millieu8T2","millieu9T2","millieu10T2"];
+  const finT2 = ["fin1T2","fin2T2","fin3T2","fin4T2","fin5T2","fin6T2","fin7T2","fin8T2","fin9T2","fin10T2"];
+  let texte = "";
+  if (nb > 0){
+    if (type !== "" ){
+        for (let i = 0 ; i<nb ; i++){
+          texte = "citation"+ (i+1) +  " :" + debutT2[getRandomInt(debutT2.length)] + milieuT2[getRandomInt(milieuT2.length)] + finT2[getRandomInt(finT2.length)]+ " \n" ;
+          document.getElementById("citationZone").innerText += texte ;
+        }
+      }
+      if (type === "1"){
+        for (let i = 0 ; i<nb ; i++){
+          texte = "citation"+ (i+1) +  " :" + debutT1[getRandomInt(debutT1.length)] + milieuT1[getRandomInt(milieuT1.length)] + finT1[getRandomInt(finT1.length)]+ " \n" ;
+          document.getElementById("citationZone").innerText += texte ;
+        }
+      }
+    } else {
+      document.getElementById("citationZone").innerText += "Pas de type séléctionner";
+    }
 
-    let  texte = "citation"+ (i+1) +  " :" + debut[getRandomInt(debut.length)] + milieu[getRandomInt(milieu.length)] + fin[getRandomInt(fin.length)]+ " \n" ;
-    document.getElementById("citationZone").innerText += texte ;
+  } else {
+    document.getElementById("citationZone").innerText = "Pas de nombre de citation séléctionner" ;
   }
-
 }

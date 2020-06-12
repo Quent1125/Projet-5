@@ -11,7 +11,13 @@
 <form>
 
     <label for="nb">Combien de citations voulait vous générer ? </label><input id="nb" type="number" max="5" min="1" >
-    <input type="submit" id="btn1" value="Générer" onclick="generateur(document.getElementById('nb').value);return false;">
+    <label>Types de citations : </label>
+    <select name="typesC" id="typesC">
+        <option value="">--Choisissez une option--</option>
+        <option value="1">Type1</option>
+        <option value="2">Type2</option>
+    </select>
+    <input type="submit" id="btn1" value="Générer" onclick="generateur(document.getElementById('nb').value,document.getElementById('typesC').value);return false;">
 
 
 
