@@ -39,7 +39,13 @@ function generateur(nb,type){
 }
 
 
-document.getElementById("btn2").addEventListener('click', document.location.reload(true));
+document.getElementById("btn2").addEventListener('click', function(){
+  document.getElementById('nb').value = "";
+  document.getElementById('typesC').value = "";
+  document.getElementById("titre1").style.display = "none";
+  document.getElementById("form2").style.display = "none";
+  
+};
 
 
-document.getElementById("btn1").addEventListener('click',generateur(document.getElementById('nb').value,document.getElementById('typesC').value));
+document.getElementById("btn1").addEventListener('click',generateur(document.getElementById('nb').value,document.getElementById('typesC').value));          
