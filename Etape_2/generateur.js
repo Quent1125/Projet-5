@@ -38,16 +38,8 @@ function afficher() {
     if (type !== "" ){
       document.getElementById("titre1").style.display = "block";
       document.getElementById("form2").style.display = "block";
-      if (type === "2" ){
-        for (let i = 0 ; i<nb ; i++){
-          document.getElementById("citationZone").innerHTML += "Citation "+ (i+1) +  " : " +generateur(type)+"<br>" ;
-        }
-      }
-      if (type === "1"){
-        for (let i = 0 ; i<nb ; i++){
-          document.getElementById("citationZone").innerHTML += "Citation "+ (i+1) +  " : " +generateur(type)+"<br>" ;
-        }
-      }
+
+      document.getElementById("citationZone").innerHTML += "Citation "+ (i+1) +  " : " +generateur(type)+"<br>" ;
     } else {
       document.getElementById("citationZone").innerHTML += "Pas de type séléctionner";
     }
