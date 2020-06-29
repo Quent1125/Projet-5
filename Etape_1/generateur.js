@@ -1,9 +1,9 @@
-function getRandomInt(max) {
+function getRandomInt(max) { //fonction qui génère un nombre aléatoire entre 0 et le paramètre max
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 
-function generateur(){
+function generateur(){  //fonction qui génère et affiche une citations
   const debutT1 = ["J'ai un rêve à accomplir,"  , "Je n'abandonnerai jamais,"  ,"N'abandonne pas,"  ,"Je ne vais pas m'enfuir en courant,"  ,"Un rêve irréalisable?"  ,"Un jour nous prendrons la mer "  ,"Continue ta route,"  ," Un jour, sans aucun doute,"  ,"Je les exterminerai tous,"  ,"Il ne faut pas me sous-estimer,"];
   const  milieuT1 = ["si je meurs en essayant,"  , "aussi longtemps que je continuerai à respirer dans ce monde,"  ,"le début est toujours le moment le plus difficile,"  ,"je ne reviens jamais sur mes mots,"  ,"c'est ça l'aventure,"  ,"et nous vivrons notre vie comme nous le voulons,"  ,"observe le monde de tes propres yeux et alors,"  ,"des amis qui te protégerons apparaîtront,"  ,"un à un jusqu'au dernier,"  ,"je vais tuer ce titan"];
   const finT1 = ["au moins j'aurai essayé !"  , "aussi longtemps que je tiendrai debout !"  ,"alors faisons de notre mieux jusqu'à la toute fin !"  ,"c'est mon nindô, ma devise de ninja ! "  ,"si on laisse passer cette occasion on le regrettera tout le restant de notre vie."
@@ -17,5 +17,5 @@ function generateur(){
 
 
 
-document.getElementById("btn1").addEventListener('click',generateur,false);
+document.getElementById("btn1").addEventListener('click',generateur,false); //une nouvelle citation est créé à chaque fois que l'on clique sur le bouton
 

@@ -3,7 +3,7 @@ function getRandomInt(max) {
 }
 
 
-function generateur(type){
+function generateur(type){  //Fonction qui permet de renvoyer une citaions composée de 3 partit (début,millieu,fin)
   document.getElementById("citationZone").innerHTML = "" ;
   const debutT1 = ["J'ai un rêve à accomplir,"  , "Je n'abandonnerai jamais,"  ,"N'abandonne pas,"  ,"Je ne vais pas m'enfuir en courant,"  ,"Un rêve irréalisable?"  ,"Un jour nous prendrons la mer "  ,"Continue ta route,"  ," Un jour, sans aucun doute,"  ,"Je les exterminerai tous,"  ,"Il ne faut pas me sous-estimer,"];
   const  milieuT1 = ["si je meurs en essayant,"  , "aussi longtemps que je continuerai à respirer dans ce monde,"  ,"le début est toujours le moment le plus difficile,"  ,"je ne reviens jamais sur mes mots,"  ,"c'est ça l'aventure,"  ,"et nous vivrons notre vie comme nous le voulons,"  ,"observe le monde de tes propres yeux et alors,"  ,"des amis qui te protégerons apparaîtront,"  ,"un à un jusqu'au dernier,"  ,"je vais tuer ce titan"];
@@ -29,17 +29,20 @@ function generateur(type){
 }
 
 
-function afficher() {
+function afficher() { // Fonction qui affiche sur la page les citaions
 
-  const nb = document.getElementById('nb').value;
-  const type = document.getElementById('typesC').value;
+  const nb = document.getElementById('nb').value; //nb correspond au nombre de citations rentrer dans le input du formulaire
+  const type = document.getElementById('typesC').value; //type est le type de la citation choisis dans le select du formulaire
   document.getElementById("citationZone").innerHTML = "" ;
   if (nb > 0){
     if (type !== "" ){
       document.getElementById("titre1").style.display = "block";
       document.getElementById("form2").style.display = "block";
 
-      document.getElementById("citationZone").innerHTML += "Citation "+ (i+1) +  " : " +generateur(type)+"<br>" ;
+      for (let i = 0 ; i<nb ; i++){
+        document.getElementById("citationZone").innerHTML += "Citation "+ (i+1) +  " : " +generateur(type)+"<br>" ;
+      }
+
     } else {
       document.getElementById("citationZone").innerHTML += "Pas de type séléctionner";
     }
@@ -48,7 +51,6 @@ function afficher() {
     document.getElementById("citationZone").innerHTML = "Pas de nombre de citation séléctionner" ;
   }
 }
-
 
 
 
