@@ -20,7 +20,7 @@ function generateur(type){  //Fonction qui permet de renvoyer une citaions compo
     if (type === "1"){
       return debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
     } else {
-      document.getElementById("citationZone").innerHTML += "Pas de type séléctionner";
+      document.getElementById("citationZone").textContent += "Pas de type séléctionné";
     }
   }
 
@@ -33,7 +33,7 @@ function afficher() { // Fonction qui affiche sur la page les citaions
 
   const nb = document.getElementById('nb').value; //nb correspond au nombre de citations rentrer dans le input du formulaire
   const type = document.getElementById('typesC').value; //type est le type de la citation choisis dans le select du formulaire
-  document.getElementById("citationZone").innerHTML = "" ;
+  document.getElementById("citationZone").textContent = "" ;
   if (nb > 0){
     if (type !== "" ){
       document.getElementById("titre1").style.display = "block";
@@ -44,11 +44,11 @@ function afficher() { // Fonction qui affiche sur la page les citaions
       }
 
     } else {
-      document.getElementById("citationZone").innerHTML += "Pas de type séléctionner";
+      document.getElementById("citationZone").textContent += "Pas de type séléctionné";
     }
 
   } else {
-    document.getElementById("citationZone").innerHTML = "Pas de nombre de citation séléctionner" ;
+    document.getElementById("citationZone").textContent = "Pas de nombre de citations séléctionné" ;
   }
 }
 
@@ -60,7 +60,7 @@ document.getElementById("btn2").addEventListener('click', function(){
     document.getElementById('typesC').value = "";
     document.getElementById("titre1").style.display = "none";
     document.getElementById("form2").style.display = "none";
-    document.getElementById("citationZone").innerHTML = "" ;
+    document.getElementById("citationZone").textContent = "" ;
     },false);
 
 

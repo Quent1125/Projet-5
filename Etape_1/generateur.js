@@ -9,9 +9,9 @@ function generateur(){  //fonction qui génère et affiche une citations
   const finT1 = ["au moins j'aurai essayé !"  , "aussi longtemps que je tiendrai debout !"  ,"alors faisons de notre mieux jusqu'à la toute fin !"  ,"c'est mon nindô, ma devise de ninja ! "  ,"si on laisse passer cette occasion on le regrettera tout le restant de notre vie."
     ,"plus libre que quiconque !"  ,"peut-être qu'à la fin de ton voyage tu parviendras à une conclusion différente de la nôtre."  ,"personne est né dans ce monde pour être tout seul !"  ,"de mes propres mains..."  ,"et vous sauver tous les trois"];
 
-  document.getElementById("citationZone").innerHTML = "" ;
+  document.getElementById("citationZone").textContent = "" ;
   document.getElementById("titre1").style.display = "block";
-  document.getElementById("citationZone").innerHTML += debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
+  document.getElementById("citationZone").textContent += debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
 
 }
 
