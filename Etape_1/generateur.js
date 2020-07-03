@@ -11,7 +11,7 @@ function generateur(){  //fonction qui génère et affiche une citations
 
   document.getElementById("citationZone").textContent = "" ;
   document.getElementById("titre1").style.display = "block";
-  document.getElementById("citationZone").textContent += debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
+  document.getElementById("citationZone").innerHTML += debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
 
 }
 

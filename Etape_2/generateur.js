@@ -11,17 +11,15 @@ function generateur(type){  //Fonction qui permet de renvoyer une citaions compo
     ,"plus libre que quiconque !"  ,"peut-être qu'à la fin de ton voyage tu parviendras à une conclusion différente de la nôtre."  ,"personne est né dans ce monde pour être tout seul !"  ,"de mes propres mains..."  ,"et vous sauver tous les trois"];
 
   const debutT2 = ["Maman disait toujours,"  , "Mais vous savez,"  ,"S'il y a une chose que l'histoire de l'évolution nous a enseignée, c'est que"  ,"Je suis malhonnête, et tu peux toujours être sûr que"  ," J'ai l'impression que "  ,"Je lis dans vos yeux,"  ,"Voyez-vous, je pense que"  ,"Et sincèrement je pense que"  ,"Tu vois,"  ,"J’ai conscience que"];
-  const  milieuT2 = ["la vie, c'est comme une boîte de chocolats,"  , "l'on peut trouver le bonheur même dans les moments les plus sombres,"  ,"la vie ne peut pas être retenue."  ,"homme malhonnête va être malhonnête,"  ,"mes yeux vont mieux,"  ,"la même peur qui pourrait saisir mon coeur,"  ,"ce qui vous terrifie tellement,"  ,"vous devriez reprendre vos esprits,"  ,"le monde se divise en deux catégories,"  ,"ce sera dur,"];
+  const  milieuT2 = ["la vie, c'est comme une boîte de chocolats,"  , "l'on peut trouver le bonheur même dans les moments les plus sombres,"  ,"la vie ne peut pas être retenue,"  ,"homme malhonnête va être malhonnête,"  ,"mes yeux vont mieux,"  ,"la même peur qui pourrait saisir mon coeur,"  ,"ce qui vous terrifie tellement,"  ,"vous devriez reprendre vos esprits,"  ,"le monde se divise en deux catégories,"  ,"ce sera dur,"];
   const finT2 = ["on ne sait jamais sur quoi on va tomber."  , "il suffit de se souvenir, d'allumer la lumière."  ,"la vie se libère, elle s'étend à de nouveaux territoires"  ,"franchement, ce sont les hommes honnêtes qu'il faut surveiller."  ,"au lieu d'un grand flou noir, je vois un grand flou lumineux."  ,"un jour peut venir, où le courage des Hommes faillira."  ,"c'est moi."  ,"absorber un tranquillisant, et essayer de faire le point."  ,"ceux qui ont un pistolet chargé et ceux qui creusent." ,"mais c’est ce que je veux. "];
 
   if (type === "2"){
     return debutT2[getRandomInt(debutT2.length)] +" "+ milieuT2[getRandomInt(milieuT2.length)] +" "+ finT2[getRandomInt(finT2.length)]+"<br>" ;
-  } else {
-    if (type === "1"){
+  } else if (type === "1"){
       return debutT1[getRandomInt(debutT1.length)] +" "+ milieuT1[getRandomInt(milieuT1.length)] +" "+ finT1[getRandomInt(finT1.length)]+"<br>" ;
-    } else {
+  } else {
       document.getElementById("citationZone").textContent += "Pas de type séléctionné";
-    }
   }
 
 
